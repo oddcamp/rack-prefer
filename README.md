@@ -1,6 +1,6 @@
 # Rack::Prefer
 
-Simple gem that parses the [HTTP prefer header](http://tools.ietf.org/html/rfc7240)
+Simple gem that parses the [HTTP prefer header](http://tools.ietf.org/html/rfc7240).
 
 ## Installation
 
@@ -29,7 +29,7 @@ Rails automatically includes the `rack/prefer` file.
 
 Once you have access to Rack::Request object (rails ActionDispatch::Request object
 inherits from Rack's Rack::Request) you also have access to Prefer header. So for
-a request like the following:
+a request like the following prefer headers:
 
 ```http
 Prefer: respond-async, wait=10
