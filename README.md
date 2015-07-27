@@ -27,7 +27,7 @@ require 'rack/prefer'
 
 Rails automatically includes the `rack/prefer` file.
 
-Once you have access to Rack::Request object (rails ActionDispatch::Request object
+Once you have access to Rack::Request object (Rails ActionDispatch::Request object
 inherits from Rack's Rack::Request) you also have access to Prefer header. So for
 a request like the following prefer headers:
 
@@ -41,13 +41,13 @@ you can do:
 ```ruby
 request.prefer.values #{"respond-async"=>nil, "wait"=>"10", "priority"=>"5"}
 request.prefer.response_async? #true
-request.return_minimal? #false
-request.wait? #true
-request.wait # 10 (integer)
-request.handling_strict? #true
-request.values['handling'] #'strict'
-#rails only
-request.values[:handling] #strict
+request.prefer.return_minimal? #false
+request.prefer.wait? #true
+request.prefer.wait # 10 (integer)
+request.prefer.handling_strict? #true
+request.prefer.values['handling'] #'strict'
+#Rails only
+request.prefer.values[:handling] #strict
 ```
 
 Happy coding!

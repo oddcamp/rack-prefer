@@ -57,6 +57,6 @@ end
 
 class Rack::Request
   def prefer
-    Rack::Prefer::PreferPresenter.new(self)
+    @prefer_presenter ||= Rack::Prefer::PreferPresenter.new(self)
   end
 end
