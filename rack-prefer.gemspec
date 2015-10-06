@@ -6,8 +6,8 @@ require 'rack/prefer/version'
 Gem::Specification.new do |spec|
   spec.name          = "rack-prefer"
   spec.version       = Rack::Prefer::VERSION
-  spec.authors       = ["Filippos Vasilakis"]
-  spec.email         = ["vasilakisfil@gmail.com"]
+  spec.authors       = ["Filippos Vasilakis", "Kollegorna"]
+  spec.email         = ["vasilakisfil@gmail.com", "admin@kollegorna.se"]
 
   spec.summary       = %q{Simple gem that parses the HTTP prefer header.}
   spec.description   = %q{Simple gem that parses the HTTP prefer header.}
