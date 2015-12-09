@@ -7,7 +7,7 @@ module Rack
 
       def initialize(req)
         @values = CGI.parse(
-          (req.headers['HTTP_PREFER'] || '').gsub(',','&').gsub(' ','')
+          (req.env['HTTP_PREFER'] || '').gsub(',','&').gsub(' ','')
         )
         @values = {} if !@values.is_a?(Hash)
         @values.each{|k,v| @values[k] = v.first}
